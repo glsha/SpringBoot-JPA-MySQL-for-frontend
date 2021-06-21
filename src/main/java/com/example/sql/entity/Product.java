@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Data
 @AllArgsConstructor
@@ -19,6 +20,7 @@ public class Product {
     @Id
     @GeneratedValue
     private int id;
+    @NotNull(message = "Name cannot be null")
     private String name;
 
 }
